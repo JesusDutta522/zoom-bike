@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZoomBike - Motorcycle Rentals in Guwahati</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://zoombike.softnue.in/assets/img/logo/logo.webp" alt="ZOOM BIKE" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rental Terms & Condition</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-success rounded-pill px-4" href="#booking">
+                            <i class="bi bi-bicycle"></i> BOOK A BIKE
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero position-relative vh-100">
+        <div id="heroCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100">
+                    <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1920&q=80" class="w-100 h-100 object-fit-cover" alt="Adventure Bike">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
+                        <div class="text-center">
+                            <h2 class="text-success mb-4">WELCOME TO ZOOMBIKE</h2>
+                            <h1 class="display-4 fw-bold mb-4">READY FOR AN ADVENTURE? RENT A BIKE AND EXPLORE<br>GUWAHATI AND ASSAM WITH ZOOMBIKE!</h1>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="#booking" class="btn btn-success btn-lg px-4">RENT NOW <i class="bi bi-arrow-right"></i></a>
+                                <a href="#" class="btn btn-outline-light btn-lg px-4">CALL NOW <i class="bi bi-telephone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?auto=format&fit=crop&w=1920&q=80" class="w-100 h-100 object-fit-cover" alt="Explore Assam">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
+                        <div class="text-center">
+                            <h2 class="text-success mb-4">EXPLORE WITH CONFIDENCE</h2>
+                            <h1 class="display-4 fw-bold mb-4">DISCOVER THE BEAUTY OF ASSAM<br>ON TWO WHEELS</h1>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="#booking" class="btn btn-success btn-lg px-4">BOOK NOW <i class="bi bi-arrow-right"></i></a>
+                                <a href="#" class="btn btn-outline-light btn-lg px-4">LEARN MORE <i class="bi bi-info-circle"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1920&q=80" class="w-100 h-100 object-fit-cover" alt="Premium Bikes">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
+                        <div class="text-center">
+                            <h2 class="text-success mb-4">BEST BIKES FOR YOUR JOURNEY</h2>
+                            <h1 class="display-4 fw-bold mb-4">PREMIUM BIKES AT<br>AFFORDABLE RATES</h1>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="#booking" class="btn btn-success btn-lg px-4">VIEW BIKES <i class="bi bi-bicycle"></i></a>
+                                <a href="#" class="btn btn-outline-light btn-lg px-4">GET PRICES <i class="bi bi-tag"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="booking" class="py-5">
+        <div class="container">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+                    <h2 class="card-title mb-4">Book Your Ride <span class="text-success">(Mandatory Documents: Original Driving Licence and Aadhar card)</span></h2>
+                    
+                    <form>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="destination" placeholder="Travel Destination">
+                                    <label for="destination">Travel Destination</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your Name">
+                                    <label for="name">Enter your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="phone" placeholder="Enter Your Phone Number">
+                                    <label for="phone">Enter Your Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <select class="form-select form-select-lg h-100" aria-label="Bike Model">
+                                    <option selected>Choose Model</option>
+                                    <option value="1">Royal Enfield Classic 350</option>
+                                    <option value="2">Honda CB Shine</option>
+                                    <option value="3">Yamaha FZ</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-3">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="pickupDate">
+                                    <label for="pickupDate">Pick Up Date</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="dropDate">
+                                    <label for="dropDate">Drop Date</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2">
+                                <div class="form-floating">
+                                    <input type="time" class="form-control" id="pickupTime">
+                                    <label for="pickupTime">Pick Up Time</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2">
+                                <div class="form-floating">
+                                    <input type="time" class="form-control" id="dropTime">
+                                    <label for="dropTime">Drop Time</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <select class="form-select form-select-lg h-100">
+                                    <option selected>Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-success btn-lg px-5">
+                                BOOK BIKE <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Bikes Section -->
+    <section class="available-bikes py-5" style="background-color: #fff1f1;">
+        <div class="container">
+            <h6 class="text-success text-center mb-2">AVAILABLE BIKE</h6>
+            <h2 class="text-center mb-5">Secure Your Ride Now And Book Your Bike For An<br>Adventure-Filled Experience!</h2>
+            
+            <div class="row g-4">
+                <!-- Himalayan 450 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 rounded-4 h-100">
+                        <div class="card-body p-3">
+                            <img src="https://zoombike.softnue.in/assets/img/service/hima450.webp" class="card-img-top rounded-4 mb-3" alt="Himalayan 450">
+                            <div class="position-relative">
+                                <a href="https://wa.me/+919101244914" class="whatsapp-icon">
+                                    <i class="bi bi-whatsapp text-white"></i>
+                                </a>
+                            </div>
+                            <h5 class="card-title text-center mb-3">Himalayan 450</h5>
+                            <div class="d-flex justify-content-center gap-2 mb-3">
+                                <span class="price-tag">₹ 1599</span>
+                                <a href="tel:+919101244914" class="btn btn-outline-dark btn-sm rounded-circle">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </a>
+                            </div>
+                            <div class="text-center">
+                                <a href="#booking" class="btn btn-success w-100">BOOK NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Himalayan 411 BS6 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 rounded-4 h-100">
+                        <div class="card-body p-3">
+                            <img src="https://zoombike.softnue.in/assets/img/service/hima411.webp" class="card-img-top rounded-4 mb-3" alt="Himalayan 411 BS6">
+                            <div class="position-relative">
+                                <a href="https://wa.me/+919101244914" class="whatsapp-icon">
+                                    <i class="bi bi-whatsapp text-white"></i>
+                                </a>
+                            </div>
+                            <h5 class="card-title text-center mb-3">Himalayan 411 BS6</h5>
+                            <div class="d-flex justify-content-center gap-2 mb-3">
+                                <span class="price-tag">₹ 1299</span>
+                                <a href="tel:+919101244914" class="btn btn-outline-dark btn-sm rounded-circle">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </a>
+                            </div>
+                            <div class="text-center">
+                                <a href="#booking" class="btn btn-success w-100">BOOK NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Classic Reborn 350 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 rounded-4 h-100">
+                        <div class="card-body p-3">
+                            <img src="https://zoombike.softnue.in/assets/img/service/clasic350.webp" class="card-img-top rounded-4 mb-3" alt="Classic Reborn 350">
+                            <div class="position-relative">
+                                <a href="https://wa.me/+919101244914" class="whatsapp-icon">
+                                    <i class="bi bi-whatsapp text-white"></i>
+                                </a>
+                            </div>
+                            <h5 class="card-title text-center mb-3">Classic Reborn 350</h5>
+                            <div class="d-flex justify-content-center gap-2 mb-3">
+                                <span class="price-tag">₹ 1199</span>
+                                <a href="tel:+919101244914" class="btn btn-outline-dark btn-sm rounded-circle">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </a>
+                            </div>
+                            <div class="text-center">
+                                <a href="#booking" class="btn btn-success w-100">BOOK NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meteor 350 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 rounded-4 h-100">
+                        <div class="card-body p-3">
+                            <img src="https://zoombike.softnue.in/assets/img/service/meteor350.webp" class="card-img-top rounded-4 mb-3" alt="Meteor 350">
+                            <div class="position-relative">
+                                <a href="https://wa.me/+919101244914" class="whatsapp-icon">
+                                    <i class="bi bi-whatsapp text-white"></i>
+                                </a>
+                            </div>
+                            <h5 class="card-title text-center mb-3">Meteor 350</h5>
+                            <div class="d-flex justify-content-center gap-2 mb-3">
+                                <span class="price-tag">₹ 1299</span>
+                                <a href="tel:+919101244914" class="btn btn-outline-dark btn-sm rounded-circle">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </a>
+                            </div>
+                            <div class="text-center">
+                                <a href="#booking" class="btn btn-success w-100">BOOK NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xpulse 200 4V -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 rounded-4 h-100">
+                        <div class="card-body p-3">
+                            <img src="https://zoombike.softnue.in/assets/img/service/meteor350.webp" class="card-img-top rounded-4 mb-3" alt="Xpulse 200 4V">
+                            <div class="position-relative">
+                                <a href="https://wa.me/+919101244914" class="whatsapp-icon">
+                                    <i class="bi bi-whatsapp text-white"></i>
+                                </a>
+                            </div>
+                            <h5 class="card-title text-center mb-3">Xpulse 200 4V</h5>
+                            <div class="d-flex justify-content-center gap-2 mb-3">
+                                <span class="price-tag">₹ 1299</span>
+                                <a href="tel:+919101244914" class="btn btn-outline-dark btn-sm rounded-circle">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </a>
+                            </div>
+                            <div class="text-center">
+                                <a href="#booking" class="btn btn-success w-100">BOOK NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yamaha FZ V3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 rounded-4 h-100">
+                        <div class="card-body p-3">
+                            <img src="https://zoombike.softnue.in/assets/img/service/hunter350.webp" class="card-img-top rounded-4 mb-3" alt="Yamaha FZ V3">
+                            <div class="position-relative">
+                                <a href="https://wa.me/+919101244914" class="whatsapp-icon">
+                                    <i class="bi bi-whatsapp text-white"></i>
+                                </a>
+                            </div>
+                            <h5 class="card-title text-center mb-3">Yamaha FZ V3</h5>
+                            <div class="d-flex justify-content-center gap-2 mb-3">
+                                <span class="price-tag">₹ 899</span>
+                                <a href="tel:+919101244914" class="btn btn-outline-dark btn-sm rounded-circle">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </a>
+                            </div>
+                            <div class="text-center">
+                                <a href="#booking" class="btn btn-success w-100">BOOK NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hunter 350 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 rounded-4 h-100">
+                        <div class="card-body p-3">
+                            <img src="https://zoombike.softnue.in/assets/img/service/yamaha-fz.webp" class="card-img-top rounded-4 mb-3" alt="Hunter 350">
+                            <div class="position-relative">
+                                <a href="https://wa.me/+919101244914" class="whatsapp-icon">
+                                    <i class="bi bi-whatsapp text-white"></i>
+                                </a>
+                            </div>
+                            <h5 class="card-title text-center mb-3">Hunter 350</h5>
+                            <div class="d-flex justify-content-center gap-2 mb-3">
+                                <span class="price-tag">₹ 1199</span>
+                                <a href="tel:+919101244914" class="btn btn-outline-dark btn-sm rounded-circle">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </a>
+                            </div>
+                            <div class="text-center">
+                                <a href="#booking" class="btn btn-success w-100">BOOK NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TVS Ntorq -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 rounded-4 h-100">
+                        <div class="card-body p-3">
+                            <img src="https://zoombike.softnue.in/assets/img/service/tvsntroq.webp" class="card-img-top rounded-4 mb-3" alt="TVS Ntorq">
+                            <div class="position-relative">
+                                <a href="https://wa.me/+919101244914" class="whatsapp-icon">
+                                    <i class="bi bi-whatsapp text-white"></i>
+                                </a>
+                            </div>
+                            <h5 class="card-title text-center mb-3">TVS Ntorq</h5>
+                            <div class="d-flex justify-content-center gap-2 mb-3">
+                                <span class="price-tag">₹ 799</span>
+                                <a href="tel:+919101244914" class="btn btn-outline-dark btn-sm rounded-circle">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </a>
+                            </div>
+                            <div class="text-center">
+                                <a href="#booking" class="btn btn-success w-100">BOOK NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://zoombike.softnue.in/assets/img/slider/aboutbike.webp" alt="Adventure Bike" class="img-fluid rounded-4">
+                </div>
+                <div class="col-lg-6">
+                    <h6 class="text-success mb-2">ABOUT US</h6>
+                    <h2 class="mb-4">Discover Adventure With<br>Our <span class="text-success">Self-Drive</span> Bike Rentals!</h2>
+                    <p class="text-muted">At ZoomBike, we're more than just a self-drive bike service. We're your ticket to freedom and adventure on two wheels. Our top-quality rentals cater to solo riders, groups, and families, ensuring everyone can explore at their own pace. Discover new destinations, create lasting memories, and embrace the thrill of the open road with ZoomBike as your trusted companion.</p>
+                    <a href="tel:+919101244914" class="btn btn-success btn-lg px-4 mt-3">
+                        CALL NOW <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us py-5" style="background-color: rgba(0, 0, 0, 0.8);">
+        <div class="container text-center">
+            <h6 class="text-success mb-2">ZOOMBIKE</h6>
+            <h2 class="text-white mb-5">Why Choose Us</h2>
+            
+            <div class="row g-4">
+                <!-- Quality Bikes -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-bicycle"></i>
+                        </div>
+                        <h4>Quality Bikes</h4>
+                        <p>We offer a fleet of well-maintained, reliable bikes, ensuring a smooth and safe ride for every adventure.</p>
+                    </div>
+                </div>
+
+                <!-- Freedom to Explore -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-map"></i>
+                        </div>
+                        <h4>Freedom to Explore</h4>
+                        <p>With our self-drive option, you have the flexibility to explore at your own pace, discovering hidden gems and scenic routes.</p>
+                    </div>
+                </div>
+
+                <!-- Easy Rental Process -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                        <h4>Easy Rental Process</h4>
+                        <p>Our hassle-free rental process ensures that you can get on the road quickly, focusing on the journey ahead.</p>
+                    </div>
+                </div>
+
+                <!-- Customer Satisfaction -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h4>Customer Satisfaction</h4>
+                        <p>We prioritize your satisfaction, providing excellent service and support throughout your rental experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-success mb-2">HOW TO USE?</h6>
+                <h2 class="mb-4">Unlock Adventure With <span class="text-success">ZoomBike</span><br>Your Limitless Journey Awaits!</h2>
+            </div>
+            
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="steps-container">
+                        <!-- Step 1 -->
+                        <div class="step-card mb-4">
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="step-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-bicycle"></i>
+                                </div>
+                                <div>
+                                    <h4>Select Your Perfect Ride</h4>
+                                    <p>Browse our diverse fleet of well-maintained bikes and choose the one that matches your adventure style!</p>
+                                </div>
+                            </div>
+                            <div class="step-number">01</div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="step-card mb-4">
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="step-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-bookmark-check"></i>
+                                </div>
+                                <div>
+                                    <h4>Quick & Easy Booking</h4>
+                                    <p>Simple booking process - just click "Book Now," select your dates, and you're ready to roll!</p>
+                                </div>
+                            </div>
+                            <div class="step-number">02</div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="step-card">
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="step-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-map"></i>
+                                </div>
+                                <div>
+                                    <h4>Explore Without Limits</h4>
+                                    <p>Hit the road with no kilometer restrictions - your adventure, your rules!</p>
+                                </div>
+                            </div>
+                            <div class="step-number">03</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://zoombike.softnue.in/assets/img/choose/bike.png" alt="Classic Bike" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Your Bike Section -->
+    <section class="book-your-bike py-5">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="text-white mb-4">Book Your Bike It's Simple<br>And Affordable</h1>
+                    <p class="text-white mb-4">Experience the simplicity and affordability of booking your bike with us! Explore new adventures with ease. Call now to book!</p>
+                </div>
+                <div class="col-lg-5 text-lg-end">
+                    <div class="d-flex flex-column align-items-lg-end align-items-start">
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="bi bi-headset text-white fs-1 me-3"></i>
+                            <div class="text-white">
+                                <h2 class="mb-0">+91 8812848989</h2>
+                            </div>
+                        </div>
+                        <a href="#booking" class="btn btn-dark btn-lg px-4 py-3">
+                            BOOK YOUR BIKE <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="checker-border-top"></div>
+        <div class="checker-border-bottom"></div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Company Info -->
+                <div class="col-lg-4 pe-lg-5">
+                    <img src="https://zoombike.softnue.in/assets/img/logo/logof.webp" alt="ZOOM BIKE" class="mb-4" height="40">
+                    <p class="text-white opacity-75 mb-4">ZoomBike offers top-quality rentals for solo riders, groups, and families, providing freedom and adventure to explore new destinations at leisure.</p>
+                    <div class="location d-flex align-items-start gap-3">
+                        <i class="bi bi-geo-alt-fill text-warning fs-5"></i>
+                        <p class="text-white opacity-75 mb-0">Opp North East public school, navadaya nagar,bye lane 7, patharkuchi road, basistha charali</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-3 ps-lg-5">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> Home</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> About Us</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> Terms & Condition</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> Conatct Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-5">
+                    <h5 class="text-white mb-4">Conatct Us On</h5>
+                    <div class="contact-info">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="contact-icon">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <a href="tel:+91 8812848989" class="text-white text-decoration-none">+91 8812848989</a>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="contact-icon">
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <a href="tel:+91 8812848989" class="text-white text-decoration-none">+91 8812848989</a>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <a href="mailto:zoombike.info@gmail.com" class="text-white text-decoration-none">zoombike.info@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="checker-border-bottom"></div>
+        
+        <!-- Copyright Section -->
+        <div class="copyright-section mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <p class="mb-0 text-white">© Copyright 2025 <a href="#" class="text-warning text-decoration-none">Zoombike</a> All Rights Reserved Designed by <a href="#" class="text-warning text-decoration-none">SOFTNUE</a></p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="social-links d-flex gap-3 justify-content-lg-end justify-content-start mt-3 mt-lg-0">
+                            <a href="#" class="social-link">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="#" class="whatsapp-float">
+        <i class="bi bi-whatsapp text-white fs-3"></i>
+    </a>
+
+    <!-- Call Float Button -->
+    <a href="#" class="call-float">
+        <i class="bi bi-telephone-fill text-white fs-3"></i>
+    </a>
+</body>
+</html>

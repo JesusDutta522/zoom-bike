@@ -1,0 +1,675 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+// Custom styles
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    margin-top: 76px;
+    
+    .carousel-item {
+        img {
+            object-position: center;
+        }
+    }
+    
+    .carousel-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    
+    .carousel-caption {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        padding: 0 15%;
+        
+        h1, h2 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    }
+    
+    .carousel-indicators {
+        margin-bottom: 3rem;
+        z-index: 2;
+        
+        button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 6px;
+            background-color: #fff;
+            opacity: 0.5;
+            
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 5%;
+        opacity: 0.7;
+        z-index: 2;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.form-floating {
+    > .form-control {
+        height: calc(3.5rem + 2px);
+        line-height: 1.25;
+    }
+    > label {
+        padding: 1rem 0.75rem;
+    }
+}
+
+.form-select-lg {
+    height: calc(3.5rem + 2px);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+// Float buttons
+.whatsapp-float,
+.call-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.call-float {
+    bottom: 120px;
+    background-color: #0d6efd;
+}
+
+// Global button styles
+.btn {
+    border-radius: 25px !important;
+    transition: all 0.3s ease !important;
+}
+
+// Custom button styles
+.btn-success {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    
+    &:hover {
+        background-color: #000 !important;
+        border-color: #000 !important;
+        color: #fff !important;
+    }
+}
+
+.btn-outline-light {
+    &:hover {
+        background-color: #000 !important;
+        border-color: #000 !important;
+        color: #fff !important;
+    }
+}
+
+.btn-dark {
+    &:hover {
+        background-color: #000 !important;
+        border-color: #000 !important;
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 56px;
+    }
+    
+    .whatsapp-float,
+    .call-float {
+        width: 50px;
+        height: 50px;
+        right: 20px;
+    }
+    
+    .call-float {
+        bottom: 100px;
+    }
+}
+
+// Available Bikes Section
+.available-bikes {
+    .card {
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+    
+    .whatsapp-icon {
+        position: absolute;
+        top: -220px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        background-color: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+        
+        i {
+            font-size: 20px;
+        }
+    }
+    
+    .price-tag {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #4CAF50;
+    }
+    
+    .btn-outline-dark {
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:hover {
+            background-color: #000 !important;
+            border-color: #000 !important;
+            color: #fff !important;
+        }
+    }
+}
+
+// About Us Section
+.about-us {
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    
+    img {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+// Why Choose Us Section
+.why-choose-us {
+    background-image: url('../assets/img/slider/aboutbike.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    
+    h2 {
+        position: relative;
+        display: inline-block;
+        
+        &::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #FFD700;
+            margin: 10px auto 0;
+        }
+    }
+    
+    .feature-card {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-5px);
+        }
+        
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background-color: #002366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            
+            i {
+                font-size: 2rem;
+                color: white;
+            }
+        }
+        
+        h4 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        p {
+            color: #666;
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 56px;
+    }
+    
+    .about-us {
+        .col-lg-6:first-child {
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+        }
+    }
+    
+    .whatsapp-float,
+    .call-float {
+        width: 50px;
+        height: 50px;
+        right: 20px;
+    }
+    
+    .call-float {
+        bottom: 100px;
+    }
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.step-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f1f1f1;
+    margin-left: auto;
+}
+
+.step-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+// How to Use Section
+.how-to-use {
+    background-color: #f8f9fa;
+    
+    .step-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+        
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: #4CAF50;
+            border-radius: 5px 0 0 5px;
+        }
+    }
+    
+    .step-icon {
+        min-width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        background: linear-gradient(45deg, #4CAF50, #45a049);
+        box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .step-number {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.05);
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: color 0.3s ease;
+    }
+    
+    .step-card:hover .step-number {
+        color: rgba(76, 175, 80, 0.1);
+    }
+    
+    h4 {
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+    
+    p {
+        color: #6c757d;
+        margin-bottom: 0;
+        max-width: 80%;
+    }
+    
+    img {
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+// Book Your Bike Section
+.book-your-bike {
+    background-color: #0F7B24;
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+
+    .btn-dark {
+        background-color: #1a1a1a;
+        border: none;
+        font-weight: 600;
+        min-width: 200px;
+        
+        &:hover {
+            background-color: #000;
+            transform: translateY(-2px);
+        }
+    }
+
+    .checker-border-top,
+    .checker-border-bottom {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 20px;
+        background-image: linear-gradient(45deg, 
+            #FFD700 25%, 
+            #000000 25%, 
+            #000000 50%, 
+            #FFD700 50%, 
+            #FFD700 75%, 
+            #000000 75%, 
+            #000000 100%
+        );
+        background-size: 40px 40px;
+    }
+
+    .checker-border-top {
+        top: 0;
+    }
+
+    .checker-border-bottom {
+        bottom: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .book-your-bike {
+        h1 {
+            font-size: 2.2rem;
+        }
+        
+        .col-lg-5 {
+            margin-top: 2rem;
+        }
+        
+        .d-flex {
+            justify-content: flex-start !important;
+        }
+    }
+}
+
+// Footer Section
+.footer {
+    background-color: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+
+    .checker-border-bottom {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 20px;
+        background-image: linear-gradient(45deg, 
+            #FFD700 25%, 
+            #000000 25%, 
+            #000000 50%, 
+            #FFD700 50%, 
+            #FFD700 75%, 
+            #000000 75%, 
+            #000000 100%
+        );
+        background-size: 40px 40px;
+    }
+
+    h5 {
+        font-weight: 600;
+        font-size: 1.25rem;
+        position: relative;
+        display: inline-block;
+        
+        &::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: #FFD700;
+            margin-top: 10px;
+        }
+    }
+
+    .quick-links {
+        li {
+            margin-bottom: 1rem;
+            
+            a {
+                color: rgba(255, 255, 255, 0.75);
+                text-decoration: none;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                
+                i {
+                    font-size: 0.8rem;
+                    margin-right: 0.5rem;
+                    color: #FFD700;
+                }
+                
+                &:hover {
+                    color: #FFD700;
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        background-color: #FFD700;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        
+        i {
+            color: #1a1a1a;
+            font-size: 1.2rem;
+        }
+    }
+
+    .contact-info {
+        a {
+            font-size: 1.1rem;
+            
+            &:hover {
+                color: #FFD700 !important;
+            }
+        }
+    }
+
+    .copyright-section {
+        background-color: #0F7B24;
+        padding: 1.5rem 0;
+        position: relative;
+        clip-path: polygon(0 0, 100% 35%, 100% 100%, 0% 100%);
+        margin-top: 8rem !important;
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                background-color: #FFD700;
+                color: #1a1a1a;
+                transform: translateY(-3px);
+            }
+            
+            i {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .footer {
+        .col-lg-3 {
+            margin-top: 2rem;
+        }
+        
+        .col-lg-5 {
+            margin-top: 2rem;
+        }
+
+        .copyright-section {
+            text-align: center;
+            
+            .social-links {
+                justify-content: center !important;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
